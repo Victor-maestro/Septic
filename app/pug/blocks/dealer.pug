@@ -1,0 +1,18 @@
+section.section.dealer
+  .container
+    h2.title-text Наша компания <span class="text-green">официальный дилер</span> <br> крупнейших произвоителей септиков
+    .swiper-container.swiper-dealer
+      .swiper-wrapper
+        .swiper-slide
+          .dealer__item
+            +image('dealer/', 's1', 'Сертификат', 'Сертификат ТОПОЛЭКО', 'jpg')(class="dealer__image")
+        .swiper-slide
+          .dealer__item
+            +image('dealer/', 's2', 'Сертификат', 'Сертификат Евролос', 'jpg')(class="dealer__image")
+        .swiper-slide
+          .dealer__item
+            +image('dealer/', 's3', 'Сертификат', 'Сертификат Deka', 'jpg')(class="dealer__image")
+      .swiper-button-prev
+        +svg('next')
+      .swiper-button-next
+        +svg('next')

@@ -117,7 +117,7 @@ p {
   font-family: $font-accent;
   color: #6c6c6c;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
 }
   
 .text-accent {
@@ -411,10 +411,6 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    &-item {
-
-    }
   }
 }
 
@@ -501,19 +497,123 @@ p {
 
 }
 
+/* dealer */
+.dealer {
+  position: relative;
+  background-image: url(../img/dealer/bg__image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#ffffff, 0.85);
+    
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+    margin: 0 auto;
+  }
+
+  &__image {
+
+  }
+
+  .swiper {
+    &-container {
+      width: 800px;
+    }
+
+    &-button-next, &-button-prev {
+      display: none;
+      top: auto;
+      bottom: 0;
+      width: 60px;
+      height: 60px;
+      transition: $slowdown;
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        fill: $accent;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-button-next {
+      right: 0
+    }
+
+    &-button-prev {
+      left: 0;
+
+      svg {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+
+  }
+
+}
 
 
 
 
 
 
-/* section */
 /* section */
 /* section */
 
 
 /* footer */
+.footer {
+  padding: 50px 0;
+  background-color: #26333c;
 
+  &__wrap {
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+  
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  
+    a {
+      color: #ffffff;
+      transition: $slowdown;
+      text-decoration: underline;
+  
+      &:hover {
+        color: darken(#ffffff, 20%);
+      }
+    }
+  }
+}
 
 
 @import 'media';

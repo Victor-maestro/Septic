@@ -222,7 +222,7 @@ p {
   font-family: Impact,Times,serif;
   color: #6c6c6c;
   text-align: center;
-  line-height: 1.1
+  line-height: 1.2
 }
 .text-accent {
   color: #efa714
@@ -576,6 +576,104 @@ p {
 }
 .producer__image {
   width: 125px
+}
+.dealer {
+  position: relative;
+  background-image: url(../img/dealer/bg__image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed
+}
+.dealer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.85)
+}
+.dealer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 240px;
+  margin: 0 auto
+}
+.dealer .swiper-container {
+  width: 800px
+}
+.dealer .swiper-button-next,
+.dealer .swiper-button-prev {
+  display: none;
+  top: auto;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.dealer .swiper-button-next::after,
+.dealer .swiper-button-prev::after {
+  display: none
+}
+.dealer .swiper-button-next svg,
+.dealer .swiper-button-prev svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  fill: #efa714;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%)
+}
+.dealer .swiper-button-next {
+  right: 0
+}
+.dealer .swiper-button-prev {
+  left: 0
+}
+.dealer .swiper-button-prev svg {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  -ms-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg)
+}
+.footer {
+  padding: 50px 0;
+  background-color: #26333c
+}
+.footer__wrap {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  text-align: center
+}
+.footer__wrap p {
+  margin-top: 0;
+  margin-bottom: 0
+}
+.footer__wrap p:not(:last-child) {
+  margin-bottom: 10px
+}
+.footer__wrap a {
+  color: #fff;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  text-decoration: underline
+}
+.footer__wrap a:hover {
+  color: #ccc
 }
 @media screen and (max-width:1200px) {
   .container {
