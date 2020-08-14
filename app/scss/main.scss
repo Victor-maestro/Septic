@@ -28,7 +28,7 @@ body{
   font-weight: 400;
   font-size: 16px;
   font-family: $font-default;
-  line-height: 1.4;
+  line-height: 1.2;
   color: $text;
   
   input, textarea {
@@ -48,23 +48,55 @@ b, strong {
 }
   
 .btn {
-  display: block;
-  padding: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 22px 50px 18px;
   font-weight: 700;
   font-size: 18px;
+  line-height: 1;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: $accent;
+  background: linear-gradient(to top, #DC8300, #F0A914);
   border: none;
-  border-radius: 30px;
+  border-radius: 40px;
   transition: $slowdown;
   cursor: pointer;
-  
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    z-index: 1;
+    width: 40px;
+    height: 90px;
+    background: linear-gradient(90deg, rgba(255,255,255,.02), rgba(255,255,255,.7));
+    transform: skewX(30deg);
+    
+  }
+    
+  &__text {
+    text-transform: uppercase;
+
+    &_bottom {
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: lowercase;
+    }
+  }
+
   &:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: lighten($accent, 10%);
-    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2);
+    &::before {
+      left: 280px;
+      transition: all 0.5s ease;
+    }
   }
 }
    
@@ -103,12 +135,198 @@ p {
 }
   
 .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
 }
 
-/* section */
+.wrap-top {
+  position: relative;
+  max-width: 1380px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #69afcd;
+  background: linear-gradient(to bottom, #69afcd 0, #69afcd 40%, #ffffff);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgba(#ffffff, 1), rgba(#ffffff, 0.01));
+  }
+
+  &__home {
+    position: absolute;
+    right: -10px;
+    bottom: 20px;
+    width: 920px;
+    height: 570px;
+    background-image: url(../img/top__img.png);
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__cloud {
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    &_1 {
+      top: 10%;
+      left: 22%;
+      width: 240px;
+      height: 77px;
+      background-image: url(../img/cloud_1.png);
+    }
+
+    &_2 {
+      bottom: -50px;
+      left: 20px;
+      width: 510px;
+      height: 450px;
+      background-image: url(../img/cloud_2.png);
+    }
+
+    &_3 {
+      bottom: -40px;
+      right: 0;
+      width: 285px;
+      height: 250px;
+      background-image: url(../img/cloud_3.png);
+    }
+  }
+}
+
+
+/* header */
+.header {
+  position: relative;
+  z-index: 1;
+  
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px
+  }
+
+  &__logo {
+    display: block;
+    width: 220px;
+    font-weight: 500;
+    color: #909090;
+  }
+}
+
+
+/* top */
+.top {
+  padding: 20px 0 50px;
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 38px;
+    font-family: $font-accent;
+  }
+
+  &__date {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 24px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+  }
+
+  &__note {
+    margin-bottom: 0;
+  }
+
+  &__stamp {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 330px;
+    width: 140px;
+    height: 140px;
+    background-image: url(../img/stamp.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__sale {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 120px;
+    height: 120px;
+    padding-top: 16px;
+    padding-bottom: 30px;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    background-color: $accent;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      z-index: 1;
+      width: 105px;
+      height: 105px;
+      background-color: $accent;
+      border-radius: 45% 45% 0 45%;
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    &-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_big {
+      font-weight: 900;
+      font-size: 44px;
+    }
+
+    &_small {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+  }
+}
+  
+
+
+
+
+
 /* section */
 /* section */
 

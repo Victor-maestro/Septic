@@ -8,6 +8,14 @@
 }
 @font-face {
   font-family: Roboto;
+  font-weight: 900;
+  font-style: normal;
+  src: url(../fonts/Roboto-Black.eot);
+  src: url(../fonts/Roboto-Black.eot?#iefix) format("embedded-opentype"),url(../fonts/Roboto-Black.woff) format("woff"),url(../fonts/Roboto-Black.woff2) format("woff2");
+  font-display: swap
+}
+@font-face {
+  font-family: Roboto;
   font-weight: 400;
   font-style: normal;
   src: url(../fonts/Roboto-Regular.eot);
@@ -115,7 +123,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-family: Roboto,Arial,Helvetica,sans-serif;
-  line-height: 1.4;
+  line-height: 1.2;
   color: #3c3c3c
 }
 body input,
@@ -133,26 +141,68 @@ strong {
   font-weight: 700
 }
 .btn {
-  display: block;
-  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 22px 50px 18px;
   font-weight: 700;
   font-size: 18px;
+  line-height: 1;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #efa714;
+  background: -webkit-gradient(linear,left bottom,left top,from(#dc8300),to(#f0a914));
+  background: -o-linear-gradient(bottom,#dc8300,#f0a914);
+  background: linear-gradient(to top,#dc8300,#f0a914);
   border: none;
-  border-radius: 30px;
+  border-radius: 40px;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
   cursor: pointer
 }
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70px;
+  z-index: 1;
+  width: 40px;
+  height: 90px;
+  background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.02)),to(rgba(255,255,255,.7)));
+  background: -o-linear-gradient(left,rgba(255,255,255,.02),rgba(255,255,255,.7));
+  background: linear-gradient(90deg,rgba(255,255,255,.02),rgba(255,255,255,.7));
+  -webkit-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  transform: skewX(30deg)
+}
+.btn__text {
+  text-transform: uppercase
+}
+.btn__text_bottom {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: lowercase
+}
 .btn:hover {
   color: #fff;
-  text-decoration: none;
-  background-color: #f2b944;
-  -webkit-box-shadow: 0 2px 9px 3px rgba(0,0,0,.2);
-  box-shadow: 0 2px 9px 3px rgba(0,0,0,.2)
+  text-decoration: none
+}
+.btn:hover::before {
+  left: 280px;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
 }
 h1,
 h2,
@@ -185,9 +235,180 @@ p {
   white-space: nowrap
 }
 .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px
+}
+.wrap-top {
+  position: relative;
+  max-width: 1380px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #69afcd;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#69afcd),color-stop(40%,#69afcd),to(#fff));
+  background: -o-linear-gradient(top,#69afcd 0,#69afcd 40%,#fff);
+  background: linear-gradient(to bottom,#69afcd 0,#69afcd 40%,#fff)
+}
+.wrap-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 50%;
+  background: -webkit-gradient(linear,left top,right top,from(white),to(rgba(255,255,255,.01)));
+  background: -o-linear-gradient(left,#fff,rgba(255,255,255,.01));
+  background: linear-gradient(to right,#fff,rgba(255,255,255,.01))
+}
+.wrap-top__home {
+  position: absolute;
+  right: -10px;
+  bottom: 20px;
+  width: 920px;
+  height: 570px;
+  background-image: url(../img/top__img.png);
+  background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat
+}
+.wrap-top__cloud {
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat
+}
+.wrap-top__cloud_1 {
+  top: 10%;
+  left: 22%;
+  width: 240px;
+  height: 77px;
+  background-image: url(../img/cloud_1.png)
+}
+.wrap-top__cloud_2 {
+  bottom: -50px;
+  left: 20px;
+  width: 510px;
+  height: 450px;
+  background-image: url(../img/cloud_2.png)
+}
+.wrap-top__cloud_3 {
+  bottom: -40px;
+  right: 0;
+  width: 285px;
+  height: 250px;
+  background-image: url(../img/cloud_3.png)
+}
+.header {
+  position: relative;
+  z-index: 1
+}
+.header__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100px
+}
+.header__logo {
+  display: block;
+  width: 220px;
+  font-weight: 500;
+  color: #909090
+}
+.top {
+  padding: 20px 0 50px
+}
+.top__wrap {
+  position: relative;
+  z-index: 1;
+  width: 50%
+}
+.top__title {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 38px;
+  font-family: Impact,Times,serif
+}
+.top__date {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 24px
+}
+.top__text {
+  margin-bottom: 20px;
+  font-size: 24px
+}
+.top__btn {
+  margin-bottom: 20px
+}
+.top__note {
+  margin-bottom: 0
+}
+.top__stamp {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 330px;
+  width: 140px;
+  height: 140px;
+  background-image: url(../img/stamp.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat
+}
+.top__sale {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 120px;
+  height: 120px;
+  padding-top: 16px;
+  padding-bottom: 30px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  background-color: #efa714;
+  border-radius: 50%
+}
+.top__sale::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 1;
+  width: 105px;
+  height: 105px;
+  background-color: #efa714;
+  border-radius: 45% 45% 0 45%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg)
+}
+.top__sale-wrap {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.top__sale_big {
+  font-weight: 900;
+  font-size: 44px
+}
+.top__sale_small {
+  font-size: 12px;
+  line-height: 1.2
 }
 @media screen and (max-width:1200px) {
   .container {

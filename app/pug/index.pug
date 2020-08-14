@@ -6,10 +6,15 @@ html
   include blocks/head.pug
 
   body
-    include blocks/header.pug
+    .wrap-top
+      .wrap-top__home
+      .wrap-top__cloud.wrap-top__cloud_1
+      .wrap-top__cloud.wrap-top__cloud_2
+      .wrap-top__cloud.wrap-top__cloud_3
 
-    section.top
-      .container
+      include blocks/header.pug
+      include blocks/top.pug
+
 
     section.section-name
       .container
