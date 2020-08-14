@@ -1,7 +1,7 @@
-// mixins добавление svg-иконки из спрайта
+//- mixins добавление svg-иконки из спрайта
 
 mixin svg(name)
 	svg&attributes(attributes)
 		use(xlink:href=`./img/sprite.svg#${name}`)
 
-// +svg('name')
+//- +svg('name')

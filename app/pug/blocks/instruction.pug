@@ -1,0 +1,35 @@
+section.instruction
+  .container
+    .instruction__wrap
+      .instruction__block.instruction__block_image
+        +image('instruction/', 'image_main', 'Пример подключения септика', 'Идеальная канализация для частного дома или дачи', 'jpg')(class="instruction__image")
+        +image('instruction/', 'image_septic', 'Септика Тверь', 'Изображение септика Тверь', 'png')(class="instruction__picture")
+
+      .instruction__block.instruction__block_text
+        p.instruction__uptitle Заберите инструкцию
+        h2.instruction__title Как выбрать идеальную канализацию для частного дома или дачи
+        
+        p.instruction__subtitle Из неё вы узнаете:
+        ul.instruction__lst
+          li.instruction__lst-item Какую канализацию лучше ставить?
+          li.instruction__lst-item На чём можно сэкономить?
+          li.instruction__lst-item На чём экономить опасно?
+          li.instruction__lst-item Какие параметры нужно обязательно учитывать при выборе септика.
+        
+        p.instruction__subtitle Куда вам прислать инструкцию?
+        ul.instruction__msngs
+          li.instruction__msngs-item
+            .radio-msngs
+              input.radio-msngs__input(id="telegram" name="msngs" type="radio" value="Telegram" checked)
+              label.radio-msngs__label(for="telegram") 
+                +svg('telegram')
+          li.instruction__msngs-item
+            .radio-msngs
+              input.radio-msngs__input(id="viber" name="msngs" type="radio" value="Viber")
+              label.radio-msngs__label(for="viber") 
+                +svg('viber')
+          li.instruction__msngs-item
+            .radio-msngs
+              input.radio-msngs__input(id="whatsapp" name="msngs" type="radio" value="WhatsApp")
+              label.radio-msngs__label(for="whatsapp")
+                +svg('whatsapp')

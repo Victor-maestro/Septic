@@ -1,11 +1,3 @@
-<!-- mixins добавление svg-иконки из спрайта-->
-<!-- +svg('name')-->
-<!-- mixins ссылки-->
-<!-- +link('/contacts', 'Контакты')(class="btn")-->
-<!-- mixins добавление изображений через тег picture-->
-<!-- +picture('Путь до изображения', 'Название изображения', 'alt', 'title', 'формат файлов')(class="picture")-->
-<!-- mixins добавление изображений через тег picture-->
-<!-- +image('Путь до изображения', 'Название изображения', 'alt', 'title', 'формат файлов')(class="image")-->
 <!DOCTYPE html>
 <html>
 
@@ -32,7 +24,7 @@
         </div>
       </div>
     </header>
-    <div class="top">
+    <section class="top">
       <div class="container">
         <div class="top__sale">
           <span class="top__sale-wrap">Акция<span class="top__sale_big">80%</span>
@@ -55,8 +47,62 @@
             <br> Данные защищены</div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
+  <section class="instruction">
+    <div class="container">
+      <div class="instruction__wrap">
+        <div class="instruction__block instruction__block_image">
+          <img class="instruction__image" src="./img/instruction/image_main.jpg" srcset="./img/instruction/image_main@2x.jpg 2x" alt="Пример подключения септика" title="Идеальная канализация для частного дома или дачи" />
+          <img class="instruction__picture" src="./img/instruction/image_septic.png" srcset="./img/instruction/image_septic@2x.png 2x" alt="Септика Тверь" title="Изображение септика Тверь" />
+        </div>
+        <div class="instruction__block instruction__block_text">
+          <p class="instruction__uptitle">Заберите инструкцию</p>
+          <h2 class="instruction__title">Как выбрать идеальную канализацию для частного дома или дачи</h2>
+          <p class="instruction__subtitle">Из неё вы узнаете:</p>
+          <ul class="instruction__lst">
+            <li class="instruction__lst-item">Какую канализацию лучше ставить?</li>
+            <li class="instruction__lst-item">На чём можно сэкономить?</li>
+            <li class="instruction__lst-item">На чём экономить опасно?</li>
+            <li class="instruction__lst-item">Какие параметры нужно обязательно учитывать при выборе септика.</li>
+          </ul>
+          <p class="instruction__subtitle">Куда вам прислать инструкцию?</p>
+          <ul class="instruction__msngs">
+            <li class="instruction__msngs-item">
+              <div class="radio-msngs">
+                <input class="radio-msngs__input" id="telegram" name="msngs" type="radio" value="Telegram" checked>
+                <label class="radio-msngs__label" for="telegram">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#telegram"></use>
+                  </svg>
+                </label>
+              </div>
+            </li>
+            <li class="instruction__msngs-item">
+              <div class="radio-msngs">
+                <input class="radio-msngs__input" id="viber" name="msngs" type="radio" value="Viber">
+                <label class="radio-msngs__label" for="viber">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#viber"></use>
+                  </svg>
+                </label>
+              </div>
+            </li>
+            <li class="instruction__msngs-item">
+              <div class="radio-msngs">
+                <input class="radio-msngs__input" id="whatsapp" name="msngs" type="radio" value="WhatsApp">
+                <label class="radio-msngs__label" for="whatsapp">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section-name">
     <div class="container"></div>
   </section>
