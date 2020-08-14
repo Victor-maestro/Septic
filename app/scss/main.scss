@@ -111,15 +111,21 @@ p {
 }
   
 .title-text {
-  margin-bottom: 0;
-  font-weight: 700;
-  font-size: 24px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: $font-accent;
+  color: #6c6c6c;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
 }
   
 .text-accent {
   color: $accent;
+}
+
+.text-green {
+  color: $green;
 }
 
 .text-black {
@@ -139,6 +145,10 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.section {
+  padding: 50px 0;
 }
 
 .wrap-top {
@@ -323,6 +333,8 @@ p {
   
 /* instruction */
 .instruction {
+  padding-top: 50px;
+
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -466,6 +478,28 @@ p {
 
 }
   
+/* producer */
+.producer {
+
+  &__lst {
+    @include lst;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+
+    &_deka {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    width: 125px;
+  }
+
+}
 
 
 
@@ -473,7 +507,7 @@ p {
 
 
 
-
+/* section */
 /* section */
 /* section */
 
