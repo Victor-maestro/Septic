@@ -688,13 +688,16 @@ p {
   -ms-flex-align: center;
   align-items: center;
   width: 20%;
-  padding: 10px;
+  padding: 10px 15px 10px;
   background-color: #2e3d48
 }
 .guarantee__block_text {
   width: 80%;
   padding: 35px 40px;
   background-color: #efa714
+}
+.guarantee__stamp {
+  width: 120px
 }
 .guarantee__text {
   margin-bottom: 0;
@@ -705,6 +708,62 @@ p {
 }
 .guarantee__text_white {
   color: #fff
+}
+.features {
+  padding-top: 80px;
+  padding-bottom: 20px
+}
+.features__wrap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.features__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 360px;
+  padding: 40px;
+  border: 1px solid #c8c8c8
+}
+.features__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 35px;
+  background-color: #60ab28;
+  border-radius: 50%
+}
+.features__icon svg {
+  width: 45px;
+  height: 45px;
+  fill: #fff
+}
+.features__text {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center
 }
 .footer {
   padding: 50px 0;

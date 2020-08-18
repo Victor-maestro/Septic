@@ -607,7 +607,7 @@ p {
       justify-content: flex-end;
       align-items: center;
       width: 20%;
-      padding: 10px;
+      padding: 10px 15px 10px;
       background-color: #2e3d48;
     }
     &_text {
@@ -618,7 +618,7 @@ p {
   }
 
   &__stamp {
-
+    width: 120px;
   }
 
   &__text {
@@ -634,6 +634,49 @@ p {
   }
 }
 
+/* features */
+.features {
+  padding-top: 80px;
+  padding-bottom: 20px;
+
+  &__wrap {
+    @include lst;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    padding: 40px;
+    border: 1px solid #c8c8c8;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 35px;
+    background-color: $green;
+    border-radius: 50%;
+
+    svg {
+      width: 45px;
+      height: 45px;
+      fill: #ffffff;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+  }
+}
 
 
 
