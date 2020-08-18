@@ -230,6 +230,12 @@ p {
 .text-green {
   color: #60ab28
 }
+.text-red {
+  color: red
+}
+.text-bold {
+  font-weight: 700
+}
 .text-black {
   font-weight: 900
 }
@@ -764,6 +770,112 @@ p {
   font-weight: 500;
   font-size: 18px;
   text-align: center
+}
+.reviews {
+  padding-bottom: 80px
+}
+.reviews__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 70px
+}
+.reviews__lst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.reviews__lst-item {
+  margin-right: 60px
+}
+.reviews__yandex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 245px;
+  flex: 1 0 245px;
+  padding: 50px;
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffcc42;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.reviews__yandex:hover {
+  background-color: #ffbe0f
+}
+.review__header {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 100px
+}
+.review__foto {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 77px;
+  height: 77px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.review__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 0
+}
+.review__inner svg {
+  width: 15px;
+  height: 15px;
+  fill: #efa714
+}
+.review__name {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #6c6c6c
+}
+.review__text {
+  line-height: 1;
+  color: #9d9d9d
+}
+.review__link {
+  display: block;
+  color: #61ab2a;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.review__link:hover {
+  color: #3e6e1b
 }
 .footer {
   padding: 50px 0;

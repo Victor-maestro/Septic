@@ -128,6 +128,14 @@ p {
   color: $green;
 }
 
+.text-red {
+  color: #ff0000;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
 .text-black {
   font-weight: 900;
 }
@@ -678,8 +686,100 @@ p {
   }
 }
 
+/* reviews */
+.reviews {
+  padding-bottom: 80px;
 
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
 
+  &__lst {
+    display: flex;
+    justify-content: space-between;
+    @include lst;
+  }
+
+  &__lst-item {
+    margin-right: 60px;
+  }
+
+  &__yandex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 245px;
+    padding: 50px;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffcc42;
+    transition: $slowdown;
+
+    &:hover {
+      background-color: darken(#ffcc42, 10%) ;
+    }
+  }
+}
+
+.review {
+  &__header{
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 100px;
+  }
+
+  &__foto {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 77px;
+    height: 77px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: #efa714;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #6c6c6c;
+  }
+
+  &__text {
+    line-height: 1;
+    color: #9d9d9d;
+  }
+
+  &__link {
+    display: block;
+    color: #61ab2a;
+    text-decoration: none;
+    transition: $slowdown;
+
+    &:hover {
+      color: darken(#61ab2a, 15%);
+    }
+  }
+
+}
 
 
 
