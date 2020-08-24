@@ -39,10 +39,10 @@
           <p class="top__text">Закрепите скидку и подберите септик
             <br> из 678 моделей от 6 ведущих
             <br> производителей прямо сейчас</p>
-          <button class="btn top__btn wow">
+          <a class="btn top__btn btn-modal popup" href="#modal">
             <span class="btn__text">Подобрать септик</span>
             <span class="btn__text btn__text_bottom">ответив на 6 вопросов</span>
-          </button>
+          </a>
           <div class="top__note">Подбор качественный и бесплатный
             <br> Данные защищены</div>
         </div>
@@ -321,6 +321,379 @@
       </div>
     </div>
   </section>
+  <div class="hidden">
+    <div class="modal" id="modal">
+      <button class="close">
+        <svg>
+          <use xlink:href="./img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal__wrap modal__wrap_quiz">
+        <div class="quiz">
+          <h2 class="quiz__title">Подберите септик и закрепите <span class="text-green">скидку 80%</span>
+            <br> на установку</h2>
+          <div class="quiz__steps"></div>
+          <div class="quiz__slide slide">
+            <span class="slide__current">1</span>/<span class="slide__summ"></span>
+          </div>
+          <form class="quiz__form" method="post" action="">
+            <div class="quiz__tab quiz__tab_first">
+              <div class="quiz__question question">
+                <span class="question__number">1</span>
+                <span class="question__main">Сколько человек будет проживать и пользоваться канализацией?</span>
+                <span class="question__hint">По количеству проживающих определяем суточный объём стоков</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="people_1" name="quantity_people" type="radio" value="1-3" checked>
+                        <label class="radio__label" for="people_1">от 1 до 3 человек</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="people_2" name="quantity_people" type="radio" value="4-6">
+                        <label class="radio__label" for="people_2">4-6 человек</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="people_3" name="quantity_people" type="radio" value="7-11">
+                        <label class="radio__label" for="people_3">7-11 человек</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="people_4" name="quantity_people" type="radio" value="12 и более">
+                        <label class="radio__label" for="people_4">Больше 12 человек</label>
+                      </div>
+                    </div>
+                    <div class="options__item options__item_info">
+                      <span class="options__text">Начните отвечать,
+                        <br> чтобы система начала подбор септика</span>
+                      <img class="options__image" src="./img/quiz/1/1.png" srcset="./img/quiz/1/1@2x.png 2x" alt="Фото септиков" title="Варианты септиков" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__tab">
+              <div class="quiz__question question">
+                <span class="question__number">2</span>
+                <span class="question__main">Укажите количество сантехнических точек</span>
+                <span class="question__hint">Определяем залповый сброс для вашей станции</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="number">
+                        <label class="number__label" for="point_1">Ванна, шт.</label>
+                        <div class="number__inner">
+                          <span class="number__minus">-</span>
+                          <input class="number__input" id="point_1" name="bathroom" type="text" value="0">
+                          <span class="number__plus">+</span>
+                        </div>
+                      </div>
+                      <div class="number">
+                        <label class="number__label" for="point_2">Душ, шт.</label>
+                        <div class="number__inner">
+                          <span class="number__minus">-</span>
+                          <input class="number__input" id="point_2" name="shower" type="text" value="0">
+                          <span class="number__plus">+</span>
+                        </div>
+                      </div>
+                      <div class="number">
+                        <label class="number__label" for="point_3">Унитаз, шт.</label>
+                        <div class="number__inner">
+                          <span class="number__minus">-</span>
+                          <input class="number__input" id="point_3" name="toilet" type="text" value="0">
+                          <span class="number__plus">+</span>
+                        </div>
+                      </div>
+                      <div class="number">
+                        <label class="number__label" for="point_4">Раковина/
+                          <br>мойка, шт.</label>
+                        <div class="number__inner">
+                          <span class="number__minus">-</span>
+                          <input class="number__input" id="point_4" name="sink" type="text" value="0">
+                          <span class="number__plus">+</span>
+                        </div>
+                      </div>
+                      <div class="number">
+                        <label class="number__label" for="point_5">Стиральная/ посудомоечная машина, шт.</label>
+                        <div class="number__inner">
+                          <span class="number__minus">-</span>
+                          <input class="number__input" id="point_5" name="washing/dishwasher" type="text" value="0">
+                          <span class="number__plus">+</span>
+                        </div>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="point_don't_know" name="san_point" type="radio" value="Ещё не знаю">
+                        <label class="radio__label" for="point_don't_know">Ещё не знаю</label>
+                      </div>
+                    </div>
+                    <div class="options__item options__item_info">
+                      <span class="options__text">
+                        <span class="text-green">Промежуточный результат:</span>
+                        <br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                      </span>
+                      <img class="options__image options__image_tall" src="./img/quiz/2/1.png" srcset="./img/quiz/2/1@2x.png 2x" alt="Фото септика" title="Deka" />
+                      <span class="options__text options__text_bottom">Продолжайте отвечать на вопросы!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__tab">
+              <div class="quiz__question question">
+                <span class="question__number">3</span>
+                <span class="question__main">Какой уровень грунтовых вод на вашем участке?</span>
+                <span class="question__hint">Определяем риск выдавливания станции из почвы</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked>
+                        <label class="radio__label" for="water_1">Низкий. Ниже 1,5 метра</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="water_2" name="water_level" type="radio" value="Выше 1,5 метра">
+                        <label class="radio__label" for="water_2">Высокий. Выше 1,5 метра</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="water_3" name="water_level" type="radio" value="Не знаю">
+                        <label class="radio__label" for="water_3">Не знаю</label>
+                      </div>
+                    </div>
+                    <div class="options__item options__item_info">
+                      <span class="options__text">
+                        <span class="text-green">Промежуточный результат:</span>
+                        <br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                      </span>
+                      <img class="options__image options__image_tall" src="./img/quiz/3/1.png" srcset="./img/quiz/3/1@2x.png 2x" alt="Фото септика" title="Deka" />
+                      <span class="options__text options__text_bottom">Продолжайте отвечать на вопросы!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__tab">
+              <div class="quiz__question question">
+                <span class="question__number">4</span>
+                <span class="question__main">Планируете использовать канализацию круглогодично?</span>
+                <span class="question__hint">Выясняем потребуется ли консервация станции на зиму</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="year_round_1" name="year_round" type="radio" value="Проживаю круглый год" checked>
+                        <label class="radio__label" for="year_round_1">Проживаю круглый год</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="year_round_2" name="year_round" type="radio" value="Проживаю только летом">
+                        <label class="radio__label" for="year_round_2">Проживаю только летом. Зимой не пользуюсь канализацией</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="year_round_3" name="year_round" type="radio" value="Проживаю летом. Зимой пользуюсь один раз в 2 недели">
+                        <label class="radio__label" for="year_round_3">Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="year_round_4" name="year_round" type="radio" value="Пока не решил">
+                        <label class="radio__label" for="year_round_4">Пока не решил</label>
+                      </div>
+                    </div>
+                    <div class="options__item options__item_info">
+                      <span class="options__text">
+                        <span class="text-green">Промежуточный результат:</span>
+                        <br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                      </span>
+                      <img class="options__image options__image_tall" src="./img/quiz/4/1.png" srcset="./img/quiz/4/1@2x.png 2x" alt="Фото септика" title="Deka" />
+                      <span class="options__text options__text_bottom">Продолжайте отвечать на вопросы!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__tab">
+              <div class="quiz__question question">
+                <span class="question__number">5</span>
+                <span class="question__main">Куда будем отводить переработанные стоки?</span>
+                <span class="question__hint">Уточняем, какой необходим отвод стоков - принудительный или самотёчный</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked>
+                        <label class="radio__label" for="drainage_1">На грунт</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава">
+                        <label class="radio__label" for="drainage_2">Ливневая канава</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец">
+                        <label class="radio__label" for="drainage_3">Дренажный колодец</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_4" name="drainage_of_drains" type="radio" value="Овраг">
+                        <label class="radio__label" for="drainage_4">Овраг</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_5" name="drainage_of_drains" type="radio" value="Не определился">
+                        <label class="radio__label" for="drainage_5">Не определился</label>
+                      </div>
+                    </div>
+                    <div class="options__item options__item_info">
+                      <span class="options__text">
+                        <span class="text-green">Промежуточный результат:</span>
+                        <br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                      </span>
+                      <img class="options__image options__image_tall" src="./img/quiz/5/1.png" srcset="./img/quiz/5/1@2x.png 2x" alt="Фото септика" title="Deka" />
+                      <span class="options__text options__text_bottom">Продолжайте отвечать на вопросы!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__tab">
+              <div class="quiz__question question">
+                <span class="question__number">6</span>
+                <span class="question__main">Выберите себе подарок за прохождение теста</span>
+                <span class="question__hint">Выберите подарок, который вы получите, если решите заказать установку септика у нас</span>
+              </div>
+              <div class="quiz__inner">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="options__img">
+                        <img src="./img/quiz/6/1.png" srcset="./img/quiz/6/1@2x.png 2x" alt="Биопрепарат для септика" title="Подарок за прохождение теста" />
+                      </div>
+                      <div class="radio radio_prize">
+                        <input class="radio__input" id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика" checked>
+                        <label class="radio__label" for="prize_one">Биопрепарат для септика</label>
+                      </div>
+                    </div>
+                    <div class="options__item">
+                      <div class="options__img">
+                        <img src="./img/quiz/6/2.png" srcset="./img/quiz/6/2@2x.png 2x" alt="Шланг поливочный MARKETHOT с распылителем" title="Подарок за прохождение теста" />
+                      </div>
+                      <div class="radio radio_prize">
+                        <input class="radio__input" id="prize_two" name="prize" type="radio" data-value="2" value="Шланг поливочный MARKETHOT с распылителем">
+                        <label class="radio__label" for="prize_two">Шланг поливочный MARKETHOT с распылителем</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__final">
+              <div class="quiz__question question question_final">
+                <span class="question__number"> </span>
+                <span class="question__main">Мы уже приступили к расчету!</span>
+                <span class="question__hint">Как вам удобнее получить результат?</span>
+                <div class="timer hidden">
+                  <div class="timer__line"></div>
+                  <div class="timer__body">
+                    <div class="timer__counter">
+                      <span>10%</span>
+                      <span>20%</span>
+                      <span>30%</span>
+                      <span>40%</span>
+                      <span>50%</span>
+                      <span>60%</span>
+                      <span>70%</span>
+                      <span>80%</span>
+                      <span>90%</span>
+                      <span>100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz__inner quiz__inner_final">
+                <div class="quiz__options options">
+                  <div class="options__wrap">
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="one" name="feedback" type="radio" value="Перезвоните мне">
+                        <label class="radio__label" for="one">Перезвоните мне,
+                          <br> у меня остались вопросы</label>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="three" name="feedback" type="radio" value="Пришлите SMS со стоимостью">
+                        <label class="radio__label" for="three">Пришлите SMS
+                          <br> со стоимостью</label>
+                      </div>
+                    </div>
+                    <div class="options__item">
+                      <div class="radio">
+                        <input class="radio__input" id="two" name="feedback" type="radio" value="Пришлите мне расчет на WhatsApp">
+                        <label class="radio__label" for="two">Пришлите мне расчет
+                          <br> стоимости на WhatsApp</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="quiz__callback">
+                  <input class="quiz__field" name="Lead[phone]" type="tel" placeholder="Ваш телефон" required>
+                  <button class="btn quiz__submit" type="submit">Получить результат</button>
+                  <label class="checkbox-politics">
+                    <input class="checkbox-politics__default" type="checkbox" name="checkbox" value="ready" checked required>
+                    <span class="checkbox-politics__new">
+                      <svg>
+                        <use xlink:href="./img/sprite.svg#check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-politics__text">С <a href="/">политикой конфиденциальности</a> ознакомлен(а)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__sidebar">
+              <div class="quiz__info info">
+                <div class="info__steps">
+                  <span class="info__title">До конца теста и
+                    <br> выбора подарка осталось:
+                    <br>
+                  </span>
+                  <span class="info__question">
+                    <span class="info__number"> </span>&nbsp;вопрос(a)
+                  </span>
+                </div>
+                <div class="info__final">
+                  <div class="info__head">
+                    <span class="info__present">Ваш подарок:</span>
+                  </div>
+                  <div class="info__denomination">Биопрепарат для септика</div>
+                </div>
+              </div>
+              <div class="quiz__nav nav">
+                <div class="btn nav__btn nav__prev">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#arrow"></use>
+                  </svg>
+                </div>
+                <button class="btn nav__btn nav__btn_prev">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+                <button class="btn nav__btn nav__btn_next">Дальше<svg>
+                    <use xlink:href="./img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+          <p class="quiz__note"> Стоимость установки имплантов в 3-х ценовых категориях сформирована.
+            <br>
+            Она откроется сразу после регистрации</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="footer__wrap">

@@ -38,7 +38,9 @@ function scripts() {
     return src([ 
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+        'app/libs/magnific-popup/jquery.magnific-popup.min.js',
         'app/libs/svgxuse-master/svgxuse.min.js',
+        'app/libs/WOW-master/wow.min.js',
         'app/libs/swiper/swiper.min.js',
     ])
     .pipe(concat('scripts.min.js'))
@@ -66,6 +68,7 @@ function mainscripts() {
 function styles() {
     return src([ 
         'node_modules/normalize.css/normalize.css',
+        'app/libs/magnific-popup/magnific-popup.css',
         'app/libs/swiper/swiper.min.css',
         'app/libs/animate/animate.min.css',
     ])

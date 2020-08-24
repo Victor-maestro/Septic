@@ -1,0 +1,250 @@
+.hidden 
+  .modal#modal
+    button.close
+      +svg('close')
+    .modal__wrap.modal__wrap_quiz
+      .quiz
+        h2.quiz__title Подберите септик и закрепите <span class="text-green">скидку 80%</span><br> на установку
+        .quiz__steps
+        .quiz__slide.slide
+          span.slide__current 1
+          | /
+          span.slide__summ
+        form.quiz__form(method="post" action="")
+          .quiz__tab.quiz__tab_first
+            .quiz__question.question
+              span.question__number 1
+              span.question__main Сколько человек будет проживать и пользоваться канализацией?
+              span.question__hint По количеству проживающих определяем суточный объём стоков
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .radio
+                      input.radio__input(id="people_1" name="quantity_people" type="radio" value="1-3" checked)
+                      label.radio__label(for="people_1") от 1 до 3 человек
+                    .radio
+                      input.radio__input(id="people_2" name="quantity_people" type="radio" value="4-6")
+                      label.radio__label(for="people_2") 4-6 человек
+                    .radio
+                      input.radio__input(id="people_3" name="quantity_people" type="radio" value="7-11")
+                      label.radio__label(for="people_3") 7-11 человек
+                    .radio
+                      input.radio__input(id="people_4" name="quantity_people" type="radio" value="12 и более")
+                      label.radio__label(for="people_4") Больше 12 человек
+                  .options__item.options__item_info
+                    span.options__text Начните отвечать,<br> чтобы система начала подбор септика
+                    +image('quiz/1/', '1', 'Фото септиков', 'Варианты септиков', 'png')(class="options__image")
+          
+          .quiz__tab
+            .quiz__question.question
+              span.question__number 2
+              span.question__main Укажите количество сантехнических точек
+              span.question__hint Определяем залповый сброс для вашей станции
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .number
+                      label.number__label(for="point_1") Ванна, шт.
+                      .number__inner
+                        span.number__minus -
+                        input.number__input(id="point_1" name="bathroom" type="text" value="0")
+                        span.number__plus +
+                    .number
+                      label.number__label(for="point_2") Душ, шт.
+                      .number__inner
+                        span.number__minus -
+                        input.number__input(id="point_2" name="shower" type="text" value="0")
+                        span.number__plus +
+                    .number
+                      label.number__label(for="point_3") Унитаз, шт.
+                      .number__inner
+                        span.number__minus -
+                        input.number__input(id="point_3" name="toilet" type="text" value="0")
+                        span.number__plus +
+                    .number
+                      label.number__label(for="point_4") Раковина/ <br>мойка, шт.
+                      .number__inner
+                        span.number__minus -
+                        input.number__input(id="point_4" name="sink" type="text" value="0")
+                        span.number__plus +
+                    .number
+                      label.number__label(for="point_5") Стиральная/ посудомоечная машина, шт.
+                      .number__inner
+                        span.number__minus -
+                        input.number__input(id="point_5" name="washing/dishwasher" type="text" value="0")
+                        span.number__plus +
+                    .radio
+                      input.radio__input(id="point_don't_know" name="san_point" type="radio" value="Ещё не знаю")
+                      label.radio__label(for="point_don't_know") Ещё не знаю
+
+                  .options__item.options__item_info
+                    span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                    +image('quiz/2/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
+            
+          .quiz__tab
+            .quiz__question.question
+              span.question__number 3
+              span.question__main Какой уровень грунтовых вод на вашем участке?
+              span.question__hint Определяем риск выдавливания станции из почвы
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .radio
+                      input.radio__input(id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked)
+                      label.radio__label(for="water_1") Низкий. Ниже 1,5 метра
+                    .radio
+                      input.radio__input(id="water_2" name="water_level" type="radio" value="Выше 1,5 метра")
+                      label.radio__label(for="water_2") Высокий. Выше 1,5 метра
+                    .radio
+                      input.radio__input(id="water_3" name="water_level" type="radio" value="Не знаю")
+                      label.radio__label(for="water_3") Не знаю
+                  .options__item.options__item_info
+                    span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                    +image('quiz/3/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
+
+          .quiz__tab
+            .quiz__question.question
+              span.question__number 4
+              span.question__main Планируете использовать канализацию круглогодично?
+              span.question__hint Выясняем потребуется ли консервация станции на зиму
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .radio
+                      input.radio__input(id="year_round_1" name="year_round" type="radio" value="Проживаю круглый год" checked)
+                      label.radio__label(for="year_round_1") Проживаю круглый год
+                    .radio
+                      input.radio__input(id="year_round_2" name="year_round" type="radio" value="Проживаю только летом")
+                      label.radio__label(for="year_round_2") Проживаю только летом. Зимой не пользуюсь канализацией
+                    .radio
+                      input.radio__input(id="year_round_3" name="year_round" type="radio" value="Проживаю летом. Зимой пользуюсь один раз в 2 недели")
+                      label.radio__label(for="year_round_3") Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще
+                    .radio
+                      input.radio__input(id="year_round_4" name="year_round" type="radio" value="Пока не решил")
+                      label.radio__label(for="year_round_4") Пока не решил
+                  .options__item.options__item_info
+                    span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                    +image('quiz/4/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
+
+          .quiz__tab
+            .quiz__question.question
+              span.question__number 5
+              span.question__main Куда будем отводить переработанные стоки?
+              span.question__hint Уточняем, какой необходим отвод стоков - принудительный или самотёчный
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .radio
+                      input.radio__input(id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked)
+                      label.radio__label(for="drainage_1") На грунт
+                    .radio
+                      input.radio__input(id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава")
+                      label.radio__label(for="drainage_2") Ливневая канава
+                    .radio
+                      input.radio__input(id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец")
+                      label.radio__label(for="drainage_3") Дренажный колодец
+                    .radio
+                      input.radio__input(id="drainage_4" name="drainage_of_drains" type="radio" value="Овраг")
+                      label.radio__label(for="drainage_4") Овраг
+                    .radio
+                      input.radio__input(id="drainage_5" name="drainage_of_drains" type="radio" value="Не определился")
+                      label.radio__label(for="drainage_5") Не определился
+                  .options__item.options__item_info
+                    span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
+                    +image('quiz/5/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
+
+          .quiz__tab
+            .quiz__question.question
+              span.question__number 6
+              span.question__main Выберите себе подарок за прохождение теста
+              span.question__hint Выберите подарок, который вы получите, если решите заказать установку септика у нас
+            .quiz__inner
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .options__img
+                      +image('quiz/6/', '1', 'Биопрепарат для септика', 'Подарок за прохождение теста', 'png')
+                    .radio.radio_prize
+                      input.radio__input(id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика" checked)
+                      label.radio__label(for="prize_one") Биопрепарат для септика
+                  .options__item
+                    .options__img
+                      +image('quiz/6/', '2', 'Шланг поливочный MARKETHOT с распылителем', 'Подарок за прохождение теста', 'png')
+                    .radio.radio_prize
+                      input.radio__input(id="prize_two" name="prize" type="radio" data-value="2" value="Шланг поливочный MARKETHOT с распылителем")
+                      label.radio__label(for="prize_two") Шланг поливочный MARKETHOT с распылителем
+
+          .quiz__final
+            .quiz__question.question.question_final
+              span.question__number 
+              span.question__main Мы уже приступили к расчету!
+              span.question__hint Как вам удобнее получить результат?
+              .timer.hidden
+                .timer__line
+                .timer__body
+                  .timer__counter
+                    span 10%
+                    span 20%
+                    span 30%
+                    span 40%
+                    span 50%
+                    span 60%
+                    span 70%
+                    span 80%
+                    span 90%
+                    span 100%
+            .quiz__inner.quiz__inner_final
+              .quiz__options.options
+                .options__wrap
+                  .options__item
+                    .radio
+                      input.radio__input(id="one" name="feedback" type="radio" value="Перезвоните мне")
+                      label.radio__label(for="one") Перезвоните мне,<br> у меня остались вопросы
+                    .radio
+                      input.radio__input(id="three" name="feedback" type="radio" value="Пришлите SMS со стоимостью")
+                      label.radio__label(for="three") Пришлите SMS<br> со стоимостью
+                  .options__item
+                    .radio
+                      input.radio__input(id="two" name="feedback" type="radio" value="Пришлите мне расчет на WhatsApp")
+                      label.radio__label(for="two") Пришлите мне расчет<br> стоимости на WhatsApp
+              .quiz__callback
+                input.quiz__field(name="Lead[phone]" type="tel" placeholder="Ваш телефон" required)
+                button.btn.quiz__submit(type="submit") Получить результат
+                label.checkbox-politics
+                  input.checkbox-politics__default(type="checkbox" name="checkbox" value="ready" checked required)
+                  span.checkbox-politics__new
+                    +svg('check')
+                  span.checkbox-politics__text С <a href="/">политикой конфиденциальности</a> ознакомлен(а)
+          
+          .quiz__sidebar
+            .quiz__info.info
+              .info__steps
+                span.info__title До конца теста и<br> выбора подарка осталось:<br>
+                span.info__question
+                  span.info__number 
+                  |&nbsp;вопрос(a)
+              .info__final
+                .info__head
+                  span.info__present Ваш подарок:
+                .info__denomination Биопрепарат для септика
+            .quiz__nav.nav
+              .btn.nav__btn.nav__prev
+                +svg('arrow')
+              button.btn.nav__btn.nav__btn_prev
+                +svg('arrow')
+              button.btn.nav__btn.nav__btn_next
+                | Дальше
+                +svg('arrow')
+
+        p.quiz__note 
+          | Стоимость установки имплантов в 3-х ценовых категориях сформирована.<br>
+          | Она откроется сразу после регистрации
