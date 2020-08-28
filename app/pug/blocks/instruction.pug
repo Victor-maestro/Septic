@@ -3,33 +3,37 @@ section.instruction
     .instruction__wrap
       .instruction__block.instruction__block_image
         +image('instruction/', 'image_main', 'Пример подключения септика', 'Идеальная канализация для частного дома или дачи', 'jpg')(class="instruction__image")
-        +image('instruction/', 'image_septic', 'Септика Тверь', 'Изображение септика Тверь', 'png')(class="instruction__picture")
+        +image('instruction/', 'image_septic', 'Септика Тверь', 'Изображение септика Тверь', 'png')(class="instruction__picture wow")
 
       .instruction__block.instruction__block_text
-        p.instruction__uptitle Заберите инструкцию
-        h2.instruction__title Как выбрать идеальную канализацию для частного дома или дачи
+        p.instruction__uptitle.wow Заберите инструкцию
+        h2.instruction__title.wow Как выбрать идеальную канализацию для частного дома или дачи
         
         p.instruction__subtitle Из неё вы узнаете:
         ul.instruction__lst
-          li.instruction__lst-item Какую канализацию лучше ставить?
-          li.instruction__lst-item На чём можно сэкономить?
-          li.instruction__lst-item На чём экономить опасно?
-          li.instruction__lst-item Какие параметры нужно обязательно учитывать при выборе септика.
+          li.instruction__lst-item.wow Какую канализацию лучше ставить?
+          li.instruction__lst-item.wow(data-wow-delay=".4s") На чём можно сэкономить?
+          li.instruction__lst-item.wow(data-wow-delay=".8s") На чём экономить опасно?
+          li.instruction__lst-item.wow(data-wow-delay="1.2s") Какие параметры нужно обязательно учитывать при выборе септика.
         
         p.instruction__subtitle Куда вам прислать инструкцию?
-        ul.instruction__msngs
-          li.instruction__msngs-item
-            .radio-msngs
-              input.radio-msngs__input(id="telegram" name="msngs" type="radio" value="Telegram" checked)
-              label.radio-msngs__label(for="telegram") 
-                +svg('telegram')
-          li.instruction__msngs-item
-            .radio-msngs
-              input.radio-msngs__input(id="viber" name="msngs" type="radio" value="Viber")
-              label.radio-msngs__label(for="viber") 
-                +svg('viber')
-          li.instruction__msngs-item
-            .radio-msngs
-              input.radio-msngs__input(id="whatsapp" name="msngs" type="radio" value="WhatsApp")
-              label.radio-msngs__label(for="whatsapp")
-                +svg('whatsapp')
+        form.form
+          ul.instruction__msngs
+            li.instruction__msngs-item
+              .radio-msngs
+                input.radio-msngs__input(id="telegram" name="msngs" type="radio" value="Telegram" checked)
+                label.radio-msngs__label(for="telegram") 
+                  +svg('telegram')
+            li.instruction__msngs-item
+              .radio-msngs
+                input.radio-msngs__input(id="viber" name="msngs" type="radio" value="Viber")
+                label.radio-msngs__label(for="viber") 
+                  +svg('viber')
+            li.instruction__msngs-item
+              .radio-msngs
+                input.radio-msngs__input(id="whatsapp" name="msngs" type="radio" value="WhatsApp")
+                label.radio-msngs__label(for="whatsapp")
+                  +svg('whatsapp')
+          .form__wrap.hidden
+            input.form__field(name="Lead[phone]" type="tel" placeholder="+7 (_ _ _) _ _ _  _ _  _ _" required)
+            button.btn.form__btn(type="submit") Забрать

@@ -1,7 +1,5 @@
 .hidden 
   .modal#modal
-    button.close
-      +svg('close')
     .modal__wrap.modal__wrap_quiz
       .quiz
         h2.quiz__title Подберите септик и закрепите <span class="text-green">скидку 80%</span><br> на установку
@@ -34,7 +32,7 @@
                       label.radio__label(for="people_4") Больше 12 человек
                   .options__item.options__item_info
                     span.options__text Начните отвечать,<br> чтобы система начала подбор септика
-                    +image('quiz/1/', '1', 'Фото септиков', 'Варианты септиков', 'png')(class="options__image")
+                    +image('quiz/', '1', 'Фото септиков', 'Варианты септиков', 'png')(class="options__image")
           
           .quiz__tab
             .quiz__question.question
@@ -81,7 +79,7 @@
 
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
-                    +image('quiz/2/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    +image('quiz/', '2', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
                     span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
             
           .quiz__tab
@@ -104,7 +102,7 @@
                       label.radio__label(for="water_3") Не знаю
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
-                    +image('quiz/3/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    +image('quiz/', '3', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
                     span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
 
           .quiz__tab
@@ -130,7 +128,7 @@
                       label.radio__label(for="year_round_4") Пока не решил
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
-                    +image('quiz/4/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    +image('quiz/', '4', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
                     span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
 
           .quiz__tab
@@ -159,7 +157,7 @@
                       label.radio__label(for="drainage_5") Не определился
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
-                    +image('quiz/5/', '1', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
+                    +image('quiz/', '5', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
                     span.options__text.options__text_bottom Продолжайте отвечать на вопросы!
 
           .quiz__tab
@@ -172,13 +170,13 @@
                 .options__wrap
                   .options__item
                     .options__img
-                      +image('quiz/6/', '1', 'Биопрепарат для септика', 'Подарок за прохождение теста', 'png')
+                      +image('quiz/prize/', '1', 'Биопрепарат для септика', 'Подарок за прохождение теста', 'png')
                     .radio.radio_prize
                       input.radio__input(id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика" checked)
                       label.radio__label(for="prize_one") Биопрепарат для септика
                   .options__item
                     .options__img
-                      +image('quiz/6/', '2', 'Шланг поливочный MARKETHOT с распылителем', 'Подарок за прохождение теста', 'png')
+                      +image('quiz/prize/', '2', 'Шланг поливочный MARKETHOT с распылителем', 'Подарок за прохождение теста', 'png')
                     .radio.radio_prize
                       input.radio__input(id="prize_two" name="prize" type="radio" data-value="2" value="Шланг поливочный MARKETHOT с распылителем")
                       label.radio__label(for="prize_two") Шланг поливочный MARKETHOT с распылителем
@@ -204,7 +202,7 @@
                     span 100%
             .quiz__inner.quiz__inner_final
               .quiz__options.options
-                .options__wrap
+                .options__wrap.options__wrap_final
                   .options__item
                     .radio
                       input.radio__input(id="one" name="feedback" type="radio" value="Перезвоните мне")

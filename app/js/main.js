@@ -12,7 +12,7 @@ $(function() {
 	$('.close').on( "click", function() {
 		$.magnificPopup.close();
 	});
-	
+
 	// $(".btn-modal").click(function(evt){
 	// 	evt.preventDefault();
 	// 	$(".modal").removeClass("hidden");
@@ -28,6 +28,13 @@ $(function() {
 	// 		$(".overlay").addClass("hidden");
 	// 	}
 	// });
+
+
+	// Show form in instruction
+	$('.radio-msngs').click(function () {
+		$(this).closest('.instruction__msngs').addClass('hidden');
+		$('.form__wrap').removeClass('hidden')
+	});
 
 	// Radio hint
 	$('.hint').click(function (evt) {
@@ -86,7 +93,7 @@ $(function() {
 	// Сhanging the image
 	$('input[name="prize"]').click(function(){
 
-		var target = 'url(./img/quiz/6/' + $(this).attr('data-value') + '.png)';
+		var target = 'url(./img/quiz/prize/' + $(this).attr('data-value') + '.png)';
 		$('.info__final').css('backgroundImage', target);
 
 		var targetText = $(this).next('.radio__label').text();
@@ -183,8 +190,26 @@ $(function() {
 		$(".info__number").text(stepsLeft);
 	}
 	
+
+	// WOW
+	const wow = new WOW({
+		boxClass: 'wow',
+		offset: 100,
+		mobile: false
+	});
+
+	$('.top__title, .top__date, .top__text').addClass('animated bounceInRight');
+	$('.top__stamp').addClass('animated bounceIn');
+	$('.title-text').addClass('animated flipInX');
+	$('.instruction__title, .instruction__uptitle, .instruction__lst-item').addClass('animated fadeInRight');
+	$('.instruction__picture, .reviews__yandex').addClass('animated zoomIn');
+	$('.guarantee__stamp').addClass('animated slideInLeft');
+	$('.guarantee__text').addClass('animated slideInRight');
+	$('.features__item').addClass('animated slideInUp');
+
 });
 
+new WOW().init();
 /* Javascript */
 
 // Swiper Dealer
@@ -200,13 +225,14 @@ var swiper_dealer = new Swiper('.swiper-dealer', {
 
 	breakpoints: {
 
-		1200: { 
+		992: { 
 			slidesPerView: 3,
 			centeredSlides: false,
 			touchRatio: 0,
 		},
 		768: { 
 			slidesPerView: 2,
+			spaceBetween: 20,
 			centeredSlides: false,
 			touchRatio: 1,
 			autoplay: {
@@ -214,7 +240,6 @@ var swiper_dealer = new Swiper('.swiper-dealer', {
 			},
 		},
 		320: { 
-			spaceBetween: 20,
 			slidesPerView: 1,
 			centeredSlides: true,
 			touchRatio: 1,

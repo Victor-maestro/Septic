@@ -180,7 +180,7 @@ p {
 
   &__home {
     position: absolute;
-    right: -10px;
+    right: 50%;
     bottom: 20px;
     width: 920px;
     height: 570px;
@@ -188,6 +188,7 @@ p {
     background-position: right center;
     background-size: contain;
     background-repeat: no-repeat;
+    transform: translateX(80%);
   }
 
   &__cloud {
@@ -359,7 +360,7 @@ p {
 
     &_text {
       width: 50%;
-      margin-left: 50px;
+      padding-left: 50px;
     }
   }
 
@@ -372,7 +373,7 @@ p {
     right: 0;
     top: 250px;
     width: 315px;
-    height: 240px;
+    height: auto;
   }
 
   &__uptitle {
@@ -482,6 +483,24 @@ p {
   }
 
 }
+
+.form {
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__field {
+    margin-right: 10px;
+    padding: 16px 20px;
+    border: 2px solid #c4c4c4;
+    border-radius: 30px;
+  }
+
+  &__btn {
+    padding: 18px 60px;
+  }
+}
   
 /* producer */
 .producer {
@@ -573,10 +592,7 @@ p {
         transform: translate(-50%, -50%) rotate(180deg);
       }
     }
-
-
   }
-
 }
 
 
@@ -914,11 +930,15 @@ p {
   background-color: rgba(#28343d, 0.9);
   transform: translate(-50%, -50%);
 }
+.mfp-close-btn-in .mfp-close {
+  font-size: 36px;
+  color: #e0e0e0;
+}
 
 .close {
   position: fixed;
-  top: 50px;
-  right: 50px;
+  top: 30px;
+  right: 40px;
   z-index: 301;
   width: 30px;
   height: 30px;
@@ -934,7 +954,7 @@ p {
   svg {
     width: 30px;
     height: 30px;
-    fill: #ffffff;
+    fill: #e4e4e4;
   }
 }
     
