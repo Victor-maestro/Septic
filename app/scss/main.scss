@@ -199,7 +199,7 @@ p {
     
     &_1 {
       top: 10%;
-      left: 22%;
+      left: 35%;
       width: 240px;
       height: 77px;
       background-image: url(../img/cloud_1.png);
@@ -207,7 +207,7 @@ p {
 
     &_2 {
       bottom: -50px;
-      left: 20px;
+      left: -20%;
       width: 510px;
       height: 450px;
       background-image: url(../img/cloud_2.png);
@@ -215,7 +215,7 @@ p {
 
     &_3 {
       bottom: -40px;
-      right: 0;
+      right: -18%;
       width: 285px;
       height: 250px;
       background-image: url(../img/cloud_3.png);
@@ -276,6 +276,7 @@ p {
   &__btn {
     width: 280px;
     margin-bottom: 20px;
+    transition: none;
   }
 
   &__note {
@@ -934,29 +935,6 @@ p {
   font-size: 36px;
   color: #e0e0e0;
 }
-
-.close {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  z-index: 301;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  &:active, &:focus {
-    outline: none
-  }
-
-  svg {
-    width: 30px;
-    height: 30px;
-    fill: #e4e4e4;
-  }
-}
     
 .modal {
   display: flex;
@@ -976,6 +954,7 @@ p {
     }
   }  
 }
+
 
 /* quiz */
 .quiz {
@@ -1349,7 +1328,8 @@ p {
     width: 300px;
 
     &_revers {
-      flex-direction: column-reverse
+      flex-direction: column-reverse;
+      justify-content: flex-end;
     }
 
     &_info {
@@ -1609,7 +1589,6 @@ p {
     border: none;
   }
 
-  
 }
 
 .hint {
@@ -1633,7 +1612,7 @@ p {
     text-align: center;
     background-color: $white;
     border-radius: 4px;
-    box-shadow: 0 0 20px 20px rgba(#6d6d6d, 0.3);
+    box-shadow: 0 0 10px 10px rgba(#6d6d6d, 0.2);
     
     &::before {
       content: '';

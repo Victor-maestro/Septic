@@ -90,16 +90,24 @@
             .quiz__inner
               .quiz__options.options
                 .options__wrap
-                  .options__item
-                    .radio
-                      input.radio__input(id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked)
-                      label.radio__label(for="water_1") Низкий. Ниже 1,5 метра
-                    .radio
-                      input.radio__input(id="water_2" name="water_level" type="radio" value="Выше 1,5 метра")
-                      label.radio__label(for="water_2") Высокий. Выше 1,5 метра
+                  .options__item.options__item_revers
                     .radio
                       input.radio__input(id="water_3" name="water_level" type="radio" value="Не знаю")
                       label.radio__label(for="water_3") Не знаю
+                    .radio
+                      input.radio__input(id="water_2" name="water_level" type="radio" value="Выше 1,5 метра")
+                      label.radio__label(for="water_2") Высокий. Выше 1,5 метра
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    .radio
+                      input.radio__input(id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked)
+                      label.radio__label(for="water_1") Низкий. Ниже 1,5 метра
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
                     +image('quiz/', '3', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
@@ -139,22 +147,38 @@
             .quiz__inner
               .quiz__options.options
                 .options__wrap
-                  .options__item
-                    .radio
-                      input.radio__input(id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked)
-                      label.radio__label(for="drainage_1") На грунт
-                    .radio
-                      input.radio__input(id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава")
-                      label.radio__label(for="drainage_2") Ливневая канава
-                    .radio
-                      input.radio__input(id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец")
-                      label.radio__label(for="drainage_3") Дренажный колодец
-                    .radio
-                      input.radio__input(id="drainage_4" name="drainage_of_drains" type="radio" value="Овраг")
-                      label.radio__label(for="drainage_4") Овраг
+                  .options__item.options__item_revers
                     .radio
                       input.radio__input(id="drainage_5" name="drainage_of_drains" type="radio" value="Не определился")
                       label.radio__label(for="drainage_5") Не определился
+                    .radio
+                      input.radio__input(id="drainage_4" name="drainage_of_drains" type="radio" value="Овраг")
+                      label.radio__label(for="drainage_4") Овраг
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    .radio
+                      input.radio__input(id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец")
+                      label.radio__label(for="drainage_3") Дренажный колодец
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    .radio
+                      input.radio__input(id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава")
+                      label.radio__label(for="drainage_2") Ливневая канава
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    .radio
+                      input.radio__input(id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked)
+                      label.radio__label(for="drainage_1") На грунт
+                      .radio__hint.hint
+                        span.hint__icon i
+                        .hint__inner.hidden
+                          span.hint__text Lorem ipsum dolor sit, amet consectetur adipisicing elit.            
                   .options__item.options__item_info
                     span.options__text <span class="text-green">Промежуточный результат:</span><br> Вам подходит станция BioDeka-5 C-800 и ещё 38 станций
                     +image('quiz/', '5', 'Фото септика', 'Deka', 'png')(class="options__image options__image_tall")
@@ -172,7 +196,7 @@
                     .options__img
                       +image('quiz/prize/', '1', 'Биопрепарат для септика', 'Подарок за прохождение теста', 'png')
                     .radio.radio_prize
-                      input.radio__input(id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика" checked)
+                      input.radio__input(id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика")
                       label.radio__label(for="prize_one") Биопрепарат для септика
                   .options__item
                     .options__img

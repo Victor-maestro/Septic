@@ -189,28 +189,8 @@ $(function() {
 
 		$(".info__number").text(stepsLeft);
 	}
-	
-
-	// WOW
-	const wow = new WOW({
-		boxClass: 'wow',
-		offset: 100,
-		mobile: false
-	});
-
-	$('.top__title, .top__date, .top__text').addClass('animated bounceInRight');
-	$('.top__stamp').addClass('animated bounceIn');
-	$('.title-text').addClass('animated flipInX');
-	$('.instruction__title, .instruction__uptitle, .instruction__lst-item').addClass('animated fadeInRight');
-	$('.instruction__picture, .reviews__yandex').addClass('animated zoomIn');
-	$('.guarantee__stamp').addClass('animated slideInLeft');
-	$('.guarantee__text').addClass('animated slideInRight');
-	$('.features__item').addClass('animated slideInUp');
 
 });
-
-new WOW().init();
-/* Javascript */
 
 // Swiper Dealer
 var swiper_dealer = new Swiper('.swiper-dealer', {
@@ -246,4 +226,217 @@ var swiper_dealer = new Swiper('.swiper-dealer', {
 		}, 
 	},
 	
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+var tl = gsap.timeline();
+tl.from(".top__title, .top__date, .top__text", {duration: 3, opacity: 0, x: 300, stagger: 0.4, ease: "elastic"});
+tl.from(".top__btn", {duration: 1.5, delay: -0.5, opacity: 0, scale: 0, ease: "bounce"});
+tl.from(".top__stamp", {duration: 2, opacity: 0, scale: 2, ease: "expo"});
+
+gsap.from(".top__sale_big", {repeat: -1, duration: 1.5, opacity: 0, scale: 0.5, ease: "power3"});
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".wrap-top__cloud_1", {
+  xPercent: -150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".wrap-top",
+    scrub: true
+  }, 
+});
+
+gsap.from(".wrap-top__cloud_2", {
+  xPercent: 150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".wrap-top",
+    scrub: true
+  }, 
+});
+
+gsap.from(".wrap-top__cloud_3", {
+  xPercent: -150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".wrap-top",
+    scrub: true
+  }, 
+});
+
+// gsap.from(".wrap-top__home", {
+// 	scale: 1.2,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".wrap-top",
+//     scrub: true
+//   }, 
+// });
+
+gsap.from(".tt_1", {
+	scrollTrigger: {
+		trigger: ".tt_1",
+		toggleActions: "play none none none",
+		start: "top 80%",
+	},
+	duration: 1.5, 
+	opacity: 0, 
+	x: 300, 
+	ease: "bounce"
+});
+
+gsap.from(".tt_2", {
+	scrollTrigger: {
+		trigger: ".tt_2",
+		toggleActions: "play none none none",
+		start: "top 80%",
+	},
+	duration: 1.5, 
+	opacity: 0, 
+	x: 300,  
+	ease: "bounce"
+});
+
+gsap.from(".tt_3", {
+	scrollTrigger: {
+		trigger: ".tt_3",
+		toggleActions: "play none none none",
+		start: "top 80%",
+	},
+	duration: 1.5, 
+	opacity: 0, 
+	x: 300, 
+	ease: "bounce"
+});
+
+gsap.from(".instruction__block_image", {
+	scrollTrigger: {
+		trigger: ".instruction__wrap",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	},
+	duration: 2, 
+	x: -250,
+	opacity: 0,
+	ease: "power2"
+});
+
+gsap.from(".instruction__block_text", {
+	scrollTrigger: {
+		trigger: ".instruction__wrap",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	},
+	duration: 2, 
+	x: 250,
+	opacity: 0,
+	ease: "power2"
+});
+
+gsap.from(".instruction__msngs-item", {
+	scrollTrigger: {
+		trigger: ".instruction__wrap",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	},
+	duration: 1, 
+	delay: 1,
+	y: 150,
+	opacity: 0,
+	stagger: 0.4,
+	ease: "power2"
+});
+
+gsap.from(".producer__item", {
+	scrollTrigger: {
+		trigger: ".producer",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	},
+	duration: 2, 
+	scale: 0,
+	opacity: 0,
+	stagger: 0.4,
+	ease: "power2"
+});
+
+
+gsap.from(".guarantee__stamp", {
+	scrollTrigger: {
+		trigger: ".guarantee",
+		toggleActions: "play none none none",
+		start: "top 70%",
+		end: "bottom 70%",
+		scrub: 1,
+	},
+	duration: 2, 
+	x: -300,
+	rotate: -360,
+	ease: "power4"
+});
+
+gsap.from(".guarantee__text", {
+	scrollTrigger: {
+		trigger: ".guarantee",
+		toggleActions: "play none none none",
+		start: "top 70%",
+		end: "bottom 70%",
+		scrub: 3,
+	},
+	duration: 2, 
+	x: 500,
+	ease: "power4"
+});
+
+
+gsap.from(".features__item", {
+	scrollTrigger: {
+		trigger: ".features",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	},
+	duration: 1.5, 
+	y: 200,
+	opacity: 0,
+	stagger: 0.4,
+	ease: "power2"
+});
+
+
+gsap.from(".reviews__yandex", {
+	scrollTrigger: {
+		trigger: ".reviews",
+		toggleActions: "play none none none",
+		start: "top 70%",
+	},
+	duration: 2, 
+	x: 200,
+	ease: "power2"
+});
+
+
+gsap.from(".contacts__block_content", {
+	scrollTrigger: {
+		trigger: ".contacts",
+		toggleActions: "play none none none",
+		start: "top 70%",
+	},
+	duration: 2, 
+	x: -300,
+	ease: "power2"
+});
+
+gsap.from(".contacts__block_map", {
+	scrollTrigger: {
+		trigger: ".contacts",
+		toggleActions: "play none none none",
+		start: "top 70%",
+	},
+	duration: 2, 
+	x: 300,
+	ease: "power2"
 });

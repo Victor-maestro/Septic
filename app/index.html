@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="wrap-top">
+  <div class="wrap-top" data-speed=".4">
     <div class="wrap-top__home"></div>
     <div class="wrap-top__cloud wrap-top__cloud_1"></div>
     <div class="wrap-top__cloud wrap-top__cloud_2"></div>
@@ -32,13 +32,13 @@
               <br> установку</span>
           </span>
         </div>
-        <div class="top__stamp wow" data-wow-delay="3s"></div>
+        <div class="top__stamp"></div>
         <div class="top__wrap">
-          <h1 class="top__title wow" data-wow-delay="1s">Подберите подходящую модель септика по приемлемой цене у официального дилера <span class="text-nowrap">за 1 минуту</span>
+          <h1 class="top__title">Подберите подходящую модель септика по приемлемой цене у официального дилера <span class="text-nowrap">за 1 минуту</span>
           </h1>
-          <p class="top__date wow" data-wow-delay="1.6s">Воспользуйтесь шансом <span class="text-nowrap">до 13 августа</span>
+          <p class="top__date">Воспользуйтесь шансом <span class="text-nowrap">до 13 августа</span>
           </p>
-          <p class="top__text wow" data-wow-delay="2.2s">Закрепите скидку и подберите септик
+          <p class="top__text">Закрепите скидку и подберите септик
             <br> из 678 моделей от 6 ведущих
             <br> производителей прямо сейчас</p>
           <a class="btn top__btn btn-modal popup" href="#modal">
@@ -113,7 +113,7 @@
   </section>
   <section class="section producer">
     <div class="container">
-      <h3 class="title-text wow">Подбираем станции из <span class="text-green">678</span> моделей
+      <h3 class="title-text tt_1">Подбираем станции из <span class="text-green">678</span> моделей
         <br>
         <span class="text-green">6</span> ведущих производителей
       </h3>
@@ -141,7 +141,7 @@
   </section>
   <section class="section dealer">
     <div class="container">
-      <h2 class="title-text wow">Наша компания <span class="text-green">официальный дилер</span>
+      <h2 class="title-text tt_2">Наша компания <span class="text-green">официальный дилер</span>
         <br> крупнейших произвоителей септиков</h2>
       <div class="swiper-container swiper-dealer">
         <div class="swiper-wrapper">
@@ -219,7 +219,7 @@
   </section>
   <section class="section reviews">
     <div class="container">
-      <h2 class="title-text wow">Читайте честные <span class="text-green">отзывы</span> о нас</h2>
+      <h2 class="title-text tt_3">Читайте честные <span class="text-green">отзывы</span> о нас</h2>
       <div class="reviews__wrap">
         <ul class="reviews__lst">
           <li class="reviews__lst-item review">
@@ -455,18 +455,30 @@
               <div class="quiz__inner">
                 <div class="quiz__options options">
                   <div class="options__wrap">
-                    <div class="options__item">
+                    <div class="options__item options__item_revers">
                       <div class="radio">
-                        <input class="radio__input" id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked>
-                        <label class="radio__label" for="water_1">Низкий. Ниже 1,5 метра</label>
+                        <input class="radio__input" id="water_3" name="water_level" type="radio" value="Не знаю">
+                        <label class="radio__label" for="water_3">Не знаю</label>
                       </div>
                       <div class="radio">
                         <input class="radio__input" id="water_2" name="water_level" type="radio" value="Выше 1,5 метра">
                         <label class="radio__label" for="water_2">Высокий. Выше 1,5 метра</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                          </div>
+                        </div>
                       </div>
                       <div class="radio">
-                        <input class="radio__input" id="water_3" name="water_level" type="radio" value="Не знаю">
-                        <label class="radio__label" for="water_3">Не знаю</label>
+                        <input class="radio__input" id="water_1" name="water_level" type="radio" value="Ниже 1,5 метра" checked>
+                        <label class="radio__label" for="water_1">Низкий. Ниже 1,5 метра</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="options__item options__item_info">
@@ -529,26 +541,50 @@
               <div class="quiz__inner">
                 <div class="quiz__options options">
                   <div class="options__wrap">
-                    <div class="options__item">
+                    <div class="options__item options__item_revers">
                       <div class="radio">
-                        <input class="radio__input" id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked>
-                        <label class="radio__label" for="drainage_1">На грунт</label>
-                      </div>
-                      <div class="radio">
-                        <input class="radio__input" id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава">
-                        <label class="radio__label" for="drainage_2">Ливневая канава</label>
-                      </div>
-                      <div class="radio">
-                        <input class="radio__input" id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец">
-                        <label class="radio__label" for="drainage_3">Дренажный колодец</label>
+                        <input class="radio__input" id="drainage_5" name="drainage_of_drains" type="radio" value="Не определился">
+                        <label class="radio__label" for="drainage_5">Не определился</label>
                       </div>
                       <div class="radio">
                         <input class="radio__input" id="drainage_4" name="drainage_of_drains" type="radio" value="Овраг">
                         <label class="radio__label" for="drainage_4">Овраг</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                          </div>
+                        </div>
                       </div>
                       <div class="radio">
-                        <input class="radio__input" id="drainage_5" name="drainage_of_drains" type="radio" value="Не определился">
-                        <label class="radio__label" for="drainage_5">Не определился</label>
+                        <input class="radio__input" id="drainage_3" name="drainage_of_drains" type="radio" value="Дренажный колодец">
+                        <label class="radio__label" for="drainage_3">Дренажный колодец</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_2" name="drainage_of_drains" type="radio" value="Ливневая канава">
+                        <label class="radio__label" for="drainage_2">Ливневая канава</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="radio">
+                        <input class="radio__input" id="drainage_1" name="drainage_of_drains" type="radio" value="На грунт" checked>
+                        <label class="radio__label" for="drainage_1">На грунт</label>
+                        <div class="radio__hint hint">
+                          <span class="hint__icon">i</span>
+                          <div class="hint__inner hidden">
+                            <span class="hint__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="options__item options__item_info">
@@ -577,7 +613,7 @@
                         <img src="./img/quiz/prize/1.png" srcset="./img/quiz/prize/1@2x.png 2x" alt="Биопрепарат для септика" title="Подарок за прохождение теста" />
                       </div>
                       <div class="radio radio_prize">
-                        <input class="radio__input" id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика" checked>
+                        <input class="radio__input" id="prize_one" name="prize" type="radio" data-value="1" value="Биопрепарат для септика">
                         <label class="radio__label" for="prize_one">Биопрепарат для септика</label>
                       </div>
                     </div>
